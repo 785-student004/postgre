@@ -1,0 +1,10 @@
+-- SELECT * from employee;
+-- SELECT emp_name,birthday,sal from employee;
+-- SELECT emp_name as ]‹Æˆõ–¼, birthday as ¶”NŒ“ú, sal as ‹‹—^, cast(sal * 12 as int) as ”Nû from employee;
+-- SELECT emp_name as ]‹Æˆõ–¼, birthday as ¶”NŒ“ú, sal as ‹‹—^, (sal * 12) :: int as ”Nû from employee;
+-- SELECT '’S“–Ò ' || emp_name || ' ‚Ì’a¶“ú‚Í ' || birthday || ' ‚Å‚·B ' from employee;
+-- SELECT emp_name, to_char(birthday, 'DAY, MONTH DD, YYYY') from employee;
+-- SELECT emp_name, to_char(sal, '9G999G999D99') from employee;
+-- SELECT emp_name, sal, comm, sal + comm from employee; 
+-- SELECT emp_name, sal, comm, sal + COALESCE(comm, 0) from employee; 
+SELECT emp_name, sal, comm, COALESCE((sal * comm) :: int, 1) from employee;
